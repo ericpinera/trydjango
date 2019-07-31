@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>About</h1>
+
+<p>
+ {{ mi_texto }}. Contacto: {{ mi_numero }}
+</p>
+
+<ul>
+{% for item in mi_lista %}     
+    {% if item == 300 %}
+        <li>{{ forloop.counter }} - {{ item |add:50}}</li>
+    {% elif item == "ABC" %}
+        <li>{{ forloop.counter }} - Elemento de texto</li>
+    {% else %}
+        <li>{{ forloop.counter }} - {{ item }}</li>
+    {% endif%}
+{% endfor %}
+</ul>
+
+{% endblock %}
