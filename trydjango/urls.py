@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path
 
 from paginas.views import home_view, about_view
+from productos.views import producto_detalles_view, producto_crear_view
 
 
 urlpatterns = [
+    path('producto', producto_detalles_view),
+    path('crear', producto_crear_view),
     path('', home_view, name='home'),
     path('about', about_view),
     path('admin/', admin.site.urls),

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>En la aplicación: {{ Objeto.titulo }}</h1>
+<p>{% if Objeto.descripcion %}{{ Objeto.descripcion }}{% else %} No tiene descripción {% endif %}</p>
+<p>{{ Objeto.precio }}</p>
+
+{% endblock %}
